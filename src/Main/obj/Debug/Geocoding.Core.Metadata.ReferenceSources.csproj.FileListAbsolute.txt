@@ -1,0 +1,4 @@
+C:\DevBuild\Tamu\GeoInnovation\Geocoding\Core.Metadata.ReferenceSources\build\1.0.0\release\Tamu.GeoInnovation.Geocoding.Core.Metadata.ReferenceSources.dll
+C:\DevBuild\Tamu\GeoInnovation\Geocoding\Core.Metadata.ReferenceSources\build\1.0.0\release\Tamu.GeoInnovation.Geocoding.Core.Metadata.ReferenceSources.pdb
+C:\DevSource\Tamu\GeoInnovation\Geocoding\Core.Metadata.ReferenceSources\src\Main\obj\Debug\Tamu.GeoInnovation.Geocoding.Core.Metadata.ReferenceSources.dll
+C:\DevSource\Tamu\GeoInnovation\Geocoding\Core.Metadata.ReferenceSources\src\Main\obj\Debug\Tamu.GeoInnovation.Geocoding.Core.Metadata.ReferenceSources.pdb
