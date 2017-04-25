@@ -321,8 +321,8 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 
 			List<ReferenceSourceType> ReferenceSourceTypes2010 = new List<ReferenceSourceType>();
 
-            ReferenceSourceTypes2010.Add(ReferenceSourceType.OpenAddresses);
             ReferenceSourceTypes2010.Add(ReferenceSourceType.CountyParcelData);
+            ReferenceSourceTypes2010.Add(ReferenceSourceType.OpenAddresses);            
             ReferenceSourceTypes2010.Add(ReferenceSourceType.Census2010ConsolidatedCities);
 			ReferenceSourceTypes2010.Add(ReferenceSourceType.Census2010Counties);
 			ReferenceSourceTypes2010.Add(ReferenceSourceType.Census2010CountySubRegions);
@@ -354,8 +354,9 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 
 			List<ReferenceSourceType> ReferenceSourceTypes2015 = new List<ReferenceSourceType>();
 
-            ReferenceSourceTypes2015.Add(ReferenceSourceType.OpenAddresses);
+
             ReferenceSourceTypes2015.Add(ReferenceSourceType.CountyParcelData);
+            ReferenceSourceTypes2015.Add(ReferenceSourceType.OpenAddresses);
             ReferenceSourceTypes2015.Add(ReferenceSourceType.Census2010ConsolidatedCities);
 			ReferenceSourceTypes2015.Add(ReferenceSourceType.Census2010Counties);
 			ReferenceSourceTypes2015.Add(ReferenceSourceType.Census2010CountySubRegions);
@@ -389,8 +390,9 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 
 			List<ReferenceSourceType> ReferenceSourceTypes2016 = new List<ReferenceSourceType>();
 
-            ReferenceSourceTypes2016.Add(ReferenceSourceType.OpenAddresses);
+
             ReferenceSourceTypes2016.Add(ReferenceSourceType.CountyParcelData);
+            ReferenceSourceTypes2016.Add(ReferenceSourceType.OpenAddresses);
             ReferenceSourceTypes2016.Add(ReferenceSourceType.Census2010ConsolidatedCities);
 			ReferenceSourceTypes2016.Add(ReferenceSourceType.Census2010Counties);
 			ReferenceSourceTypes2016.Add(ReferenceSourceType.Census2010CountySubRegions);
@@ -431,9 +433,9 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 
 		public void SetDefaultOrderedReferenceSourceTypes()
 		{
-			DefaultOrderedReferenceSourceTypes = new List<ReferenceSourceType>();
-            DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.OpenAddresses);
+			DefaultOrderedReferenceSourceTypes = new List<ReferenceSourceType>();            
             DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.CountyParcelData);
+            DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.OpenAddresses);
             DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.NavteqAddressPoints2016);
             DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.NavteqAddressPoints2014);
             DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.NavteqAddressPoints2013);
@@ -472,7 +474,8 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 		public void SetDefaultReferenceSourceTypes()
 		{
 			DefaultReferenceSourceTypes = new List<ReferenceSourceType>();
-            DefaultReferenceSourceTypes.Add(ReferenceSourceType.OpenAddresses);
+            DefaultReferenceSourceTypes.Add(ReferenceSourceType.CountyParcelData);
+            DefaultReferenceSourceTypes.Add(ReferenceSourceType.OpenAddresses);            
             DefaultReferenceSourceTypes.Add(ReferenceSourceType.Census2000ConsolidatedCities);
 			DefaultReferenceSourceTypes.Add(ReferenceSourceType.Census2000Counties);
 			DefaultReferenceSourceTypes.Add(ReferenceSourceType.Census2000CountySubRegions);
