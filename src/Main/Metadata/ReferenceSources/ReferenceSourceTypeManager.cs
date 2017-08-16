@@ -443,10 +443,11 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 			DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.ParcelCentroids);
 			DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.BoundarySolutionsParcelCentroids);
 			DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.ParcelGeometries);
-			DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.NavteqStreets2008);
 			DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.NavteqStreets2012);
-			DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.Census2010TigerLines);
-			DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.Census2010TigerLines);
+			DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.NavteqStreets2008);
+			DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.Census2016TigerLines);
+            DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.Census2015TigerLines);
+            DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.Census2010TigerLines);
 			//DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.Census2008TigerLines);
 			//DefaultOrderedReferenceSourceTypes[3] = ReferenceSourceType.Census2005TigerLines;
 			DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.USPSTigerZipPlus4);
