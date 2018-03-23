@@ -41,6 +41,7 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 		BoundarySolutionsParcelCentroids,
 		NavteqStreets2008,
 		NavteqStreets2012,
+        NavteqAddressPoints2017,
         NavteqAddressPoints2016,
         NavteqAddressPoints2014,
         NavteqAddressPoints2013,
@@ -73,6 +74,7 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 		public const string SOURCE_NAME_NAVTEQ_ADDRESSPOINTS_2013 = "SOURCE_NAVTEQ_ADDRESSPOINTS_2013";
         public const string SOURCE_NAME_NAVTEQ_ADDRESSPOINTS_2014 = "SOURCE_NAVTEQ_ADDRESSPOINTS_2014";
         public const string SOURCE_NAME_NAVTEQ_ADDRESSPOINTS_2016 = "SOURCE_NAVTEQ_ADDRESSPOINTS_2016";
+        public const string SOURCE_NAME_NAVTEQ_ADDRESSPOINTS_2017 = "SOURCE_NAVTEQ_ADDRESSPOINTS_2017";
         public const string SOURCE_NAME_CENSUS_2000_ZCTAS = "SOURCE_CENSUS_2000_ZCTAS";
 		public const string SOURCE_NAME_CENSUS_2000_PLACES = "SOURCE_CENSUS_2000_PLACES";
 		public const string SOURCE_NAME_CENSUS_2000_MINOR_CIVIL_DIVISIONS = "SOURCE_CENSUS_2000_MINOR_CIVIL_DIVISIONS";
@@ -119,6 +121,7 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 		public const string SOURCE_SHORT_NAME_NAVTEQ_ADDRESSPOINTS_2013 = "navteqAddressPoints2013";
         public const string SOURCE_SHORT_NAME_NAVTEQ_ADDRESSPOINTS_2014 = "navteqAddressPoints2014";
         public const string SOURCE_SHORT_NAME_NAVTEQ_ADDRESSPOINTS_2016 = "navteqAddressPoints2016";
+        public const string SOURCE_SHORT_NAME_NAVTEQ_ADDRESSPOINTS_2017 = "navteqAddressPoints2017";
         public const string SOURCE_SHORT_NAME_CENSUS_2000_ZCTAS = "census2000ZCTAs";
 		public const string SOURCE_SHORT_NAME_CENSUS_2000_PLACES = "census2000Places";
 		public const string SOURCE_SHORT_NAME_CENSUS_2000_MINOR_CIVIL_DIVISIONS = "census2000MCDs";
@@ -165,6 +168,7 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 		public const string SOURCE_DESCRIPTION_NAVTEQ_ADDRESSPOINTS_2013 = "Navteq North American Address Point Files 2013";
         public const string SOURCE_DESCRIPTION_NAVTEQ_ADDRESSPOINTS_2014 = "Navteq North American Address Point Files 2014";
         public const string SOURCE_DESCRIPTION_NAVTEQ_ADDRESSPOINTS_2016 = "Navteq North American Address Point Files 2016";
+        public const string SOURCE_DESCRIPTION_NAVTEQ_ADDRESSPOINTS_2017 = "Navteq North American Address Point Files 2017";
         public const string SOURCE_DESCRIPTION_CENSUS_2000_ZCTAS = "US Census Bureau 2000 Catographic Boundary Files zip code tabulation areas";
 		public const string SOURCE_DESCRIPTION_CENSUS_2000_PLACES = "US Census Bureau 2000 Catographic Boundary Files places";
 		public const string SOURCE_DESCRIPTION_CENSUS_2000_MINOR_CIVIL_DIVISIONS = "US Census Bureau 2005 Catographic Boundary Files minor civil divisions";
@@ -250,6 +254,7 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 		public const string SOURCE_VINTAGE_NAVTEQ_ADDRESSPOINTS_2013 = "2013";
         public const string SOURCE_VINTAGE_NAVTEQ_ADDRESSPOINTS_2014 = "2014";
         public const string SOURCE_VINTAGE_NAVTEQ_ADDRESSPOINTS_2016 = "2016";
+        public const string SOURCE_VINTAGE_NAVTEQ_ADDRESSPOINTS_2017 = "2017";
         public const string SOURCE_VINTAGE_CENSUS_2000_ZCTAS = "2000";
 		public const string SOURCE_VINTAGE_CENSUS_2000_PLACES = "2000";
 		public const string SOURCE_VINTAGE_CENSUS_2000_MINOR_CIVIL_DIVISIONS = "2000";
@@ -333,6 +338,7 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 			ReferenceSourceTypes2010.Add(ReferenceSourceType.BoundarySolutionsParcelCentroids);
 			ReferenceSourceTypes2010.Add(ReferenceSourceType.NavteqStreets2008);
 			ReferenceSourceTypes2010.Add(ReferenceSourceType.NavteqStreets2012);
+            ReferenceSourceTypes2010.Add(ReferenceSourceType.NavteqAddressPoints2017);
             ReferenceSourceTypes2010.Add(ReferenceSourceType.NavteqAddressPoints2016);
             ReferenceSourceTypes2010.Add(ReferenceSourceType.NavteqAddressPoints2014);
             ReferenceSourceTypes2010.Add(ReferenceSourceType.NavteqAddressPoints2013);
@@ -369,6 +375,7 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 			ReferenceSourceTypes2015.Add(ReferenceSourceType.BoundarySolutionsParcelCentroids);
 			ReferenceSourceTypes2015.Add(ReferenceSourceType.NavteqStreets2008);
 			ReferenceSourceTypes2015.Add(ReferenceSourceType.NavteqStreets2012);
+            ReferenceSourceTypes2015.Add(ReferenceSourceType.NavteqAddressPoints2017);
             ReferenceSourceTypes2015.Add(ReferenceSourceType.NavteqAddressPoints2016);
             ReferenceSourceTypes2015.Add(ReferenceSourceType.NavteqAddressPoints2013);
             ReferenceSourceTypes2015.Add(ReferenceSourceType.NavteqAddressPoints2014);
@@ -405,6 +412,7 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 			ReferenceSourceTypes2016.Add(ReferenceSourceType.BoundarySolutionsParcelCentroids);
 			ReferenceSourceTypes2016.Add(ReferenceSourceType.NavteqStreets2008);
 			ReferenceSourceTypes2016.Add(ReferenceSourceType.NavteqStreets2012);
+            ReferenceSourceTypes2016.Add(ReferenceSourceType.NavteqAddressPoints2017);
             ReferenceSourceTypes2016.Add(ReferenceSourceType.NavteqAddressPoints2016);
             ReferenceSourceTypes2016.Add(ReferenceSourceType.NavteqAddressPoints2014);
             ReferenceSourceTypes2016.Add(ReferenceSourceType.NavteqAddressPoints2013);
@@ -436,6 +444,7 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 			DefaultOrderedReferenceSourceTypes = new List<ReferenceSourceType>();            
             DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.CountyParcelData);
             DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.OpenAddresses);
+            DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.NavteqAddressPoints2017);
             DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.NavteqAddressPoints2016);
             DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.NavteqAddressPoints2014);
             DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.NavteqAddressPoints2013);
@@ -504,6 +513,7 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 			DefaultReferenceSourceTypes.Add(ReferenceSourceType.ParcelCentroids);
 			DefaultReferenceSourceTypes.Add(ReferenceSourceType.ParcelGeometries);
 			DefaultReferenceSourceTypes.Add(ReferenceSourceType.BoundarySolutionsParcelCentroids);
+            DefaultReferenceSourceTypes.Add(ReferenceSourceType.NavteqAddressPoints2017);
             DefaultReferenceSourceTypes.Add(ReferenceSourceType.NavteqAddressPoints2016);
             DefaultReferenceSourceTypes.Add(ReferenceSourceType.NavteqAddressPoints2014);
             DefaultReferenceSourceTypes.Add(ReferenceSourceType.NavteqAddressPoints2013);
@@ -600,6 +610,10 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 			{
 				ret = ReferenceSourceType.NavteqStreets2012;
 			}
+            else if (String.Compare(name, SOURCE_NAME_NAVTEQ_ADDRESSPOINTS_2017, true) == 0)
+            {
+                ret = ReferenceSourceType.NavteqAddressPoints2017;
+            }
             else if (String.Compare(name, SOURCE_NAME_NAVTEQ_ADDRESSPOINTS_2016, true) == 0)
             {
                 ret = ReferenceSourceType.NavteqAddressPoints2016;
@@ -786,6 +800,9 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 				case ReferenceSourceType.NavteqStreets2012:
 					ret = SOURCE_NAME_NAVTEQ_STREETS_2012;
 					break;
+                case ReferenceSourceType.NavteqAddressPoints2017:
+                    ret = SOURCE_NAME_NAVTEQ_ADDRESSPOINTS_2017;
+                    break;
                 case ReferenceSourceType.NavteqAddressPoints2016:
                     ret = SOURCE_NAME_NAVTEQ_ADDRESSPOINTS_2016;
                     break;
@@ -920,6 +937,9 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 				case ReferenceSourceType.NavteqStreets2012:
 					ret = SOURCE_SHORT_NAME_NAVTEQ_STREETS_2012;
 					break;
+                case ReferenceSourceType.NavteqAddressPoints2017:
+                    ret = SOURCE_SHORT_NAME_NAVTEQ_ADDRESSPOINTS_2017;
+                    break;
                 case ReferenceSourceType.NavteqAddressPoints2016:
                     ret = SOURCE_SHORT_NAME_NAVTEQ_ADDRESSPOINTS_2016;
                     break;
@@ -1054,6 +1074,9 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 				case ReferenceSourceType.NavteqStreets2012:
 					ret = SOURCE_DESCRIPTION_NAVTEQ_STREETS_2012;
 					break;
+                case ReferenceSourceType.NavteqAddressPoints2017:
+                    ret = SOURCE_DESCRIPTION_NAVTEQ_ADDRESSPOINTS_2017;
+                    break;
                 case ReferenceSourceType.NavteqAddressPoints2016:
                     ret = SOURCE_DESCRIPTION_NAVTEQ_ADDRESSPOINTS_2016;
                     break;
@@ -1189,6 +1212,9 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 				case ReferenceSourceType.NavteqStreets2012:
 					ret = SOURCE_VINTAGE_NAVTEQ_STREETS_2012;
 					break;
+                case ReferenceSourceType.NavteqAddressPoints2017:
+                    ret = SOURCE_VINTAGE_NAVTEQ_ADDRESSPOINTS_2017;
+                    break;
                 case ReferenceSourceType.NavteqAddressPoints2016:
                     ret = SOURCE_VINTAGE_NAVTEQ_ADDRESSPOINTS_2016;
                     break;
