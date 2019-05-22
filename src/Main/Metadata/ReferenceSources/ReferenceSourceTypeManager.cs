@@ -36,8 +36,7 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 		Census2010CountySubRegions,
 		Census2010Counties,
 		Census2010States,
-		ParcelCentroids,
-		CountyParcelData,
+		ParcelCentroids,		
 		BoundarySolutionsParcelCentroids,
 		NavteqStreets2008,
 		NavteqStreets2012,
@@ -51,7 +50,9 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 		ZipCodeDownloadZips2013,
 		Dynamic,
         OpenAddresses,
-	}
+        CountyParcelData,
+        MicrosoftFootprints,
+    }
 
 	public class ReferenceSourceTypeManager
 	{
@@ -59,6 +60,7 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 		public List<ReferenceSourceType> DefaultReferenceSourceTypes { get; set; }
 		public List<ReferenceSourceType> DefaultOrderedReferenceSourceTypes { get; set; }
 
+        public const string SOURCE_NAME_MICROSOFT_FOOTPRINTS = "SOURCE_MICROSOFT_FOOTPRINTS";
         public const string SOURCE_NAME_OPENADDRESSES = "SOURCE_OPENADDRESSES";
         public const string SOURCE_NAME_ESRI_STREETMAP_NORTHAMERICA = "SOURCE_ESRI_STREETMAP_NORTHAMERICA";
 		public const string SOURCE_NAME_TIGERLINES = "SOURCE_CENSUS_TIGERLINES_2005";
@@ -106,7 +108,9 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 
 
         // short names
+        public const string SOURCE_SHORT_NAME_MICROSOFT_FOOTPRINTS = "MicrosoftFootprints";
         public const string SOURCE_SHORT_NAME_OPENADDRESSES = "OpenAddresses";
+        public const string SOURCE_SHORT_NAME_COUNTY_PARCELS = "countyParcelData";
         public const string SOURCE_SHORT_NAME_ESRI_STREETMAP_NORTHAMERICA = "esriStreetMapNA";
 		public const string SOURCE_SHORT_NAME_TIGERLINES = "tiger2005";
 		public const string SOURCE_SHORT_NAME_TIGERLINES_2008 = "tiger2008";
@@ -142,8 +146,7 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 		public const string SOURCE_SHORT_NAME_CENSUS_2010_COUNTY_SUBREGIONS = "census2010CountySubRegions";
 		public const string SOURCE_SHORT_NAME_CENSUS_2010_CONSOLIDATED_CITIES = "census2010ConsolidatedCities";
 		public const string SOURCE_SHORT_NAME_CENSUS_2010_STATES = "census2010States";
-
-		public const string SOURCE_SHORT_NAME_COUNTY_PARCELS = "countyParcelData";
+        		
 		public const string SOURCE_SHORT_NAME_PARCELS = "parcelGeometries";
 		public const string SOURCE_SHORT_NAME_PARCEL_CENTROIDS = "parcelCentroids";
 		public const string SOURCE_SHORT_NAME_BOUNDARY_SOLUTIONS_PARCEL_CENTROIDS = "boundarySolutionsParcelCentroids";
@@ -153,6 +156,8 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 		public const string SOURCE_SHORT_NAME_ZIPCODEDOWNLOAD_ZIPS2013 = "zcdZips2013";
 
         // descriptions
+        public const string SOURCE_DESCRIPTION_MICROSOFT_FOOTPRINTS = "Footprints from Microsoft";
+        public const string SOURCE_DESCRIPTION_COUNTY_PARCELS = "Parcel geometry files gathered from counties around the country";
         public const string SOURCE_DESCRIPTION_OPENADDRESSES = "Open data from OpenAddresses";
         public const string SOURCE_DESCRIPTION_ESRI_STREETMAP_NORTHAMERICA = "ESRI Street Map North America";
 		public const string SOURCE_DESCRIPTION_TIGERLINES = "US Census Bureau 2005 TIGER/Line Files edges";
@@ -190,8 +195,7 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 		public const string SOURCE_DESCRIPTION_CENSUS_2010_CONSOLIDATED_CITIES = "US Census Bureau 2010 TIGER/Line Files consolidated cities";
 		public const string SOURCE_DESCRIPTION_CENSUS_2010_STATES = "US Census Bureau 2010 TIGER/Line Files states";
 
-		public const string SOURCE_DESCRIPTION_PARCELS = "Parcel geometry files gathered from around the country";
-		public const string SOURCE_DESCRIPTION_COUNTY_PARCELS = "Parcel geometry files gathered from counties around the country";
+		public const string SOURCE_DESCRIPTION_PARCELS = "Parcel geometry files gathered from around the country";		
 		public const string SOURCE_DESCRIPTION_PARCEL_CENTROIDS = "Parcel centroids files gathered from around the country";
 		public const string SOURCE_DESCRIPTION_BOUNDARY_SOLUTIONS_PARCEL_CENTROIDS = "Parcel centroids files from Boundary Solutions Inc";
 		public const string SOURCE_DESCRIPTION_UNKNOWN = "Unknown";
@@ -199,6 +203,7 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 		public const string SOURCE_DESCRIPTION_ZIPCODEDOWNLOAD_ZIPS2013 = "ZipCode Download Zips 2013";
 
         // creators
+        public const string SOURCE_CREATOR_MICROSOFT_FOOTPRINTS = "Microsoft";
         public const string SOURCE_CREATOR_OPENADDRESSES = "User Contributed to OpenAddresses.io";
         public const string SOURCE_CREATOR_ESRI_STREETMAP_NORTHAMERICA = "US Census Bureau";
 		public const string SOURCE_CREATOR_TIGERLINES = "US Census Bureau";
@@ -239,7 +244,8 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 		public const string SOURCE_CREATOR_ZIPCODEDOWNLOAD_ZIPS2013 = "ZipCodeDownload.com";
 
         // vintage
-        public const string SOURCE_VINTAGE_OPENADDRESSES = "2017";
+        public const string SOURCE_VINTAGE_MICROSOFT_FOOTPRINTS = "2019";
+        public const string SOURCE_VINTAGE_OPENADDRESSES = "2019";
         public const string SOURCE_VINTAGE_ESRI_STREETMAP_NORTHAMERICA = "2009";
 		public const string SOURCE_VINTAGE_TIGERLINES = "2005";
 		public const string SOURCE_VINTAGE_TIGERLINES_2008 = "2008";
@@ -326,6 +332,7 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 
 			List<ReferenceSourceType> ReferenceSourceTypes2010 = new List<ReferenceSourceType>();
 
+            ReferenceSourceTypes2010.Add(ReferenceSourceType.MicrosoftFootprints);
             ReferenceSourceTypes2010.Add(ReferenceSourceType.CountyParcelData);
             ReferenceSourceTypes2010.Add(ReferenceSourceType.OpenAddresses);            
             ReferenceSourceTypes2010.Add(ReferenceSourceType.Census2010ConsolidatedCities);
@@ -360,7 +367,7 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 
 			List<ReferenceSourceType> ReferenceSourceTypes2015 = new List<ReferenceSourceType>();
 
-
+            ReferenceSourceTypes2015.Add(ReferenceSourceType.MicrosoftFootprints);
             ReferenceSourceTypes2015.Add(ReferenceSourceType.CountyParcelData);
             ReferenceSourceTypes2015.Add(ReferenceSourceType.OpenAddresses);
             ReferenceSourceTypes2015.Add(ReferenceSourceType.Census2010ConsolidatedCities);
@@ -397,7 +404,7 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 
 			List<ReferenceSourceType> ReferenceSourceTypes2016 = new List<ReferenceSourceType>();
 
-
+            ReferenceSourceTypes2016.Add(ReferenceSourceType.MicrosoftFootprints);
             ReferenceSourceTypes2016.Add(ReferenceSourceType.CountyParcelData);
             ReferenceSourceTypes2016.Add(ReferenceSourceType.OpenAddresses);
             ReferenceSourceTypes2016.Add(ReferenceSourceType.Census2010ConsolidatedCities);
@@ -441,7 +448,8 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 
 		public void SetDefaultOrderedReferenceSourceTypes()
 		{
-			DefaultOrderedReferenceSourceTypes = new List<ReferenceSourceType>();            
+			DefaultOrderedReferenceSourceTypes = new List<ReferenceSourceType>();
+            DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.MicrosoftFootprints);
             DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.CountyParcelData);
             DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.OpenAddresses);
             DefaultOrderedReferenceSourceTypes.Add(ReferenceSourceType.NavteqAddressPoints2017);
@@ -484,6 +492,7 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 		public void SetDefaultReferenceSourceTypes()
 		{
 			DefaultReferenceSourceTypes = new List<ReferenceSourceType>();
+            DefaultReferenceSourceTypes.Add(ReferenceSourceType.MicrosoftFootprints);
             DefaultReferenceSourceTypes.Add(ReferenceSourceType.CountyParcelData);
             DefaultReferenceSourceTypes.Add(ReferenceSourceType.OpenAddresses);            
             DefaultReferenceSourceTypes.Add(ReferenceSourceType.Census2000ConsolidatedCities);
@@ -509,7 +518,8 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 			DefaultReferenceSourceTypes.Add(ReferenceSourceType.Census2015TigerLines);
 			DefaultReferenceSourceTypes.Add(ReferenceSourceType.Census2010TigerLines);
 			DefaultReferenceSourceTypes.Add(ReferenceSourceType.Census2010ZCTAs);
-			DefaultReferenceSourceTypes.Add(ReferenceSourceType.CountyParcelData);
+            DefaultReferenceSourceTypes.Add(ReferenceSourceType.MicrosoftFootprints);
+            DefaultReferenceSourceTypes.Add(ReferenceSourceType.CountyParcelData);
 			DefaultReferenceSourceTypes.Add(ReferenceSourceType.ParcelCentroids);
 			DefaultReferenceSourceTypes.Add(ReferenceSourceType.ParcelGeometries);
 			DefaultReferenceSourceTypes.Add(ReferenceSourceType.BoundarySolutionsParcelCentroids);
@@ -694,9 +704,13 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 			{
 				ret = ReferenceSourceType.Census2000ZCTAs;
 			}
-            if (String.Compare(name, SOURCE_NAME_OPENADDRESSES, true) == 0)
+            else if (String.Compare(name, SOURCE_NAME_OPENADDRESSES, true) == 0)
             {
                 ret = ReferenceSourceType.OpenAddresses;
+            }
+            else if (String.Compare(name, SOURCE_NAME_MICROSOFT_FOOTPRINTS, true) == 0)
+            {
+                ret = ReferenceSourceType.MicrosoftFootprints;
             }
             else
 			{
@@ -710,6 +724,9 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 			string ret = "";
 			switch (t)
 			{
+                case ReferenceSourceType.MicrosoftFootprints:
+                    ret = SOURCE_NAME_MICROSOFT_FOOTPRINTS;
+                    break;
                 case ReferenceSourceType.OpenAddresses:
                     ret = SOURCE_NAME_OPENADDRESSES;
                     break;
@@ -847,6 +864,9 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 			string ret = "";
 			switch (t)
 			{
+                case ReferenceSourceType.MicrosoftFootprints:
+                    ret = SOURCE_SHORT_NAME_MICROSOFT_FOOTPRINTS;
+                    break;
                 case ReferenceSourceType.OpenAddresses:
                     ret = SOURCE_SHORT_NAME_OPENADDRESSES;
                     break;
@@ -984,6 +1004,9 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 			string ret = "";
 			switch (t)
 			{
+                case ReferenceSourceType.MicrosoftFootprints:
+                    ret = SOURCE_DESCRIPTION_MICROSOFT_FOOTPRINTS;
+                    break;
                 case ReferenceSourceType.OpenAddresses:
                     ret = SOURCE_DESCRIPTION_OPENADDRESSES;
                     break;
@@ -1121,6 +1144,9 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 			string ret = "";
 			switch (t)
 			{
+                case ReferenceSourceType.MicrosoftFootprints:
+                    ret = SOURCE_VINTAGE_MICROSOFT_FOOTPRINTS;
+                    break;
                 case ReferenceSourceType.OpenAddresses:
                     ret = SOURCE_VINTAGE_OPENADDRESSES;
                     break;
