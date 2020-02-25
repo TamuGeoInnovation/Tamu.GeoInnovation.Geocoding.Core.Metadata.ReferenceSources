@@ -244,8 +244,8 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
         public const string SOURCE_CREATOR_ZIPCODEDOWNLOAD_ZIPS2013 = "ZipCodeDownload.com";
 
         // vintage
-        public const string SOURCE_VINTAGE_MICROSOFT_FOOTPRINTS = "2019";
-        public const string SOURCE_VINTAGE_OPENADDRESSES = "2019";
+        public const string SOURCE_VINTAGE_MICROSOFT_FOOTPRINTS = "2020";
+        public const string SOURCE_VINTAGE_OPENADDRESSES = "2020";
         public const string SOURCE_VINTAGE_ESRI_STREETMAP_NORTHAMERICA = "2009";
         public const string SOURCE_VINTAGE_TIGERLINES = "2005";
         public const string SOURCE_VINTAGE_TIGERLINES_2008 = "2008";
@@ -282,11 +282,11 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
         public const string SOURCE_VINTAGE_CENSUS_2010_CONSOLIDATED_CITIES = "2010";
         public const string SOURCE_VINTAGE_CENSUS_2010_STATES = "2010";
 
-        public const string SOURCE_VINTAGE_COUNTY_PARCELS = "Varies by dataset";
-        public const string SOURCE_VINTAGE_PARCELS = "Varies by dataset";
-        public const string SOURCE_VINTAGE_PARCEL_CENTROIDS = "Varies by dataset";
+        public const string SOURCE_VINTAGE_COUNTY_PARCELS = "2020";
+        public const string SOURCE_VINTAGE_PARCELS = "2020";
+        public const string SOURCE_VINTAGE_PARCEL_CENTROIDS = "2012";
         public const string SOURCE_VINTAGE_BOUNDARY_SOLUTIONS_PARCEL_CENTROIDS = "2012";
-        public const string SOURCE_VINTAGE_UNKNOWN = "Unknown";
+        public const string SOURCE_VINTAGE_UNKNOWN = "0";
         public const string SOURCE_VINTAGE_USPS_ZIP4TIGERLINES = "2007";
         public const string SOURCE_VINTAGE_ZIPCODEDOWNLOAD_ZIPS2013 = "2013";
 
@@ -398,6 +398,19 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
             return ret;
         }
 
+        public string[] GetDefaultReferenceSourceTypes2016AsArray()
+        {
+            string[] ret = null;
+
+            string sources = GetDefaultReferenceSourceTypes2016();
+            if (!String.IsNullOrEmpty(sources))
+            {
+                ret = sources.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+            }
+
+            return ret;
+        }
+
         public string GetDefaultReferenceSourceTypes2016()
         {
             string ret = "";
@@ -429,7 +442,7 @@ namespace USC.GISResearchLab.Geocoding.Core.Metadata.ReferenceSources
 
             foreach (ReferenceSourceType item in ReferenceSourceTypes2016)
             {
-                ret = StringUtils.ConcatCSV(ret, GetReferenceSourceShortName(item));
+                ret = StringUtils.ConcatCSV(ret, item.ToString());
             }
 
             return ret;
